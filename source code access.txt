@@ -1,0 +1,1 @@
+The files are not distributed as binarys, instead, they are distributed as .bat files that allows for direct modifications from any plain text editor
