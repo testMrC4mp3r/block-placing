@@ -278,6 +278,8 @@ set by25=
 set blockcount=0
 goto restartscreen
 :lastblock
-set bx%blockcount%= 
-set by%blockcount%= 
+if %blockcount% equ 0 goto restartscreen
+set/a blockdelete=%blockcount%-1
+set bx%blockdelete%= 
+set by%blockdelete%= 
 goto restartscreen
