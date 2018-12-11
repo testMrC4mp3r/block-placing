@@ -226,7 +226,7 @@ if %facing%==right set/a by%blockcount%=%y% & set/a bx%blockcount%=%x%+1 & set/a
 if %facing%==down set/a by%blockcount%=%y%-1 & set/a bx%blockcount%=%x% & set/a blockcount=%blockcount%+1
 goto restartscreen
 :blockdelete
-::Actually this one resets all posible variables of blocks positions to 1 space, thus making the set command in screen unusable, making all the blocks dissapear
+::Actually this one resets all posible variables of blocks positions to 1 space, thus making all the blocks dissapear
 set bx0= 
 set by0= 
 set bx1= 
