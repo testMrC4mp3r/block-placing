@@ -184,15 +184,17 @@ echo -----------------------
 echo Move with the wasd keys
 echo Place blocks with b
 echo delete ALL blocks with g
+echo delete last block with h
 echo --------------------
 echo Maximum of 26 block
-choice /c wasdbg /n /t 9999 /d w
+choice /c wasdbgh /n /t 9999 /d w
 if %ERRORLEVEL%==1 goto w
 if %ERRORLEVEL%==2 goto a
 if %ERRORLEVEL%==3 goto s
 if %ERRORLEVEL%==4 goto d
 if %ERRORLEVEL%==5 goto blockplacing
 if %ERRORLEVEL%==6 goto blockdelete
+if %ERRORLEVEL%==7 goto lastblock
 :w
 if %y%==%maxy% goto screen
 set/a y=%y%+1
@@ -274,4 +276,8 @@ set by24=
 set bx25= 
 set by25= 
 set blockcount=0
+goto restartscreen
+:lastblock
+set bx%blockcount%= 
+set by%blockcount%= 
 goto restartscreen
