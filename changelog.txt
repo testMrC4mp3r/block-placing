@@ -1,3 +1,4 @@
 11/12/2018
 Added a option in controls to delete the last block placed
+Commented game.bat a little bit more
 ----------------------------------------------------------
