@@ -1,6 +1,6 @@
 @echo off
 title Block Placing By Alex
-::You can personaliza the started position here, by modifying the x and y variables, default is x=6 y=6, DO NOT touch maxx, maxy, minx, miny, unless you have modified the map, since it will cause errors
+::You can personaliz the start position here, by modifying the x and y variables, default is x=6 y=6, DO NOT touch maxx, maxy, minx, miny, unless you have modified the map, since it will cause errors
 set x=6
 set y=6
 set minx=1
