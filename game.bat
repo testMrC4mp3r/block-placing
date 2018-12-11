@@ -282,7 +282,7 @@ set by25=
 set blockcount=0
 goto restartscreen
 :lastblock
-::if you subtract 1 to the block count command, you'll make it point to the last block placed, then you restart the bx and by of that block. It works kinda like :blockdelete
+::if you subtract 1 to the block count variable, you'll make it point to the last block placed, then you restart the bx and by of that block. It works kinda like :blockdelete
 if %blockcount% equ 0 goto restartscreen
 set/a blockdelete=%blockcount%-1
 set bx%blockdelete%= 
