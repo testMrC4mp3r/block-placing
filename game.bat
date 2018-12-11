@@ -282,5 +282,5 @@ if %blockcount% equ 0 goto restartscreen
 set/a blockdelete=%blockcount%-1
 set bx%blockdelete%= 
 set by%blockdelete%= 
-set blockcount=%blockcount%-1
+set/a blockcount=%blockcount%-1
 goto restartscreen
