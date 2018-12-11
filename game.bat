@@ -6,7 +6,7 @@ set minx=1
 set miny=1
 set maxx=11
 set maxy=11
-::You can personalize the texture of the block (block) and the character (chr) here. Foture versions may include an option to personalize in game
+::You can personalize the texture of the block (block) and the character (chr) here. Future versions may include an option to personalize these in game
 set chr=@
 set block=#
 set blockcount=0
