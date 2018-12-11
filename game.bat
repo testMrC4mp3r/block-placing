@@ -1,5 +1,4 @@
 @echo off
-::New map for my new game
 title Block Placing By Alex
 set x=6
 set y=6
@@ -7,11 +6,12 @@ set minx=1
 set miny=1
 set maxx=11
 set maxy=11
+::You can personalize the texture of the block (block) and the character (chr) here. Foture versions may include an option to personalize in game
 set chr=@
 set block=#
 set blockcount=0
 :restartscreen
-::You know the deal, in this one everything is 1 space instead of two
+::MUST be 1 space per variable, that space will be fullfilled with the chr variable, that should also be 1 space
 set X1Y1= 
 set X1Y2= 
 set X1Y3= 
@@ -216,6 +216,8 @@ set /a x=%x%+1
 set facing=right
 goto restartscreen
 :blockplacing
+::the bx and by variables also haves the amount of blocks actually on screen, this allows for multiple blocks
+::You can add more by, modifiying the if command here and then go to the start of :screen, there is pretty self-explanatory AND going to the block delete section and adding these same variables there
 if %blockcount% equ 26 goto restartscreen
 if %facing%==up set/a by%blockcount%=%y%+1 & set/a bx%blockcount%=%x% & set/a blockcount=%blockcount%+1
 if %facing%==left set/a by%blockcount%=%y% & set/a bx%blockcount%=%x%-1 & set/a blockcount=%blockcount%+1
@@ -223,6 +225,7 @@ if %facing%==right set/a by%blockcount%=%y% & set/a bx%blockcount%=%x%+1 & set/a
 if %facing%==down set/a by%blockcount%=%y%-1 & set/a bx%blockcount%=%x% & set/a blockcount=%blockcount%+1
 goto restartscreen
 :blockdelete
+::Actually this one resets all posible variables of blocks positions to 1 space, thus making the set command in screen unusable, making all the blocks dissapear
 set bx0= 
 set by0= 
 set bx1= 
@@ -278,6 +281,7 @@ set by25=
 set blockcount=0
 goto restartscreen
 :lastblock
+::if you subtract 1 to the block count command, you'll make it point to the last block placed, then you restart the bx and by to that block. It works kinda like :blockdelete
 if %blockcount% equ 0 goto restartscreen
 set/a blockdelete=%blockcount%-1
 set bx%blockdelete%= 
