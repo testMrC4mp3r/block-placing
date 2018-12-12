@@ -4,4 +4,5 @@ Commented game.bat a little bit more
 ----------------------------------------------------------
 12/12/2018
 "Optimized" the commands for :lastblock, unnecesary variable %blockdelete% is no longer used, instead, it operates directly with %blockcount%
+You can now set custom character and block in game!
 ---------------------------------------------------------------------------------------------------------------------------------------------
