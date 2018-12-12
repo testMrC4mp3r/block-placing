@@ -7,7 +7,8 @@ set minx=1
 set miny=1
 set maxx=11
 set maxy=11
-::You can personalize the texture of the block (block) and the character (chr) here. Future versions may include an option to personalize these in game
+::You can personalize the texture of the block (block) and the character (chr) here or in game. DO NOT touch blockcount leave it to 0 or bugs will happen.
+::default is chr=@ block=#
 set chr=@
 set block=#
 set blockcount=0
@@ -188,7 +189,7 @@ echo delete ALL blocks with g
 echo delete last block with h
 echo --------------------
 echo Maximum of 26 block
-choice /c wasdbgh /n /t 9999 /d w
+choice /c wasdbghp /n /t 9999 /d w
 if %ERRORLEVEL%==1 goto w
 if %ERRORLEVEL%==2 goto a
 if %ERRORLEVEL%==3 goto s
@@ -196,6 +197,7 @@ if %ERRORLEVEL%==4 goto d
 if %ERRORLEVEL%==5 goto blockplacing
 if %ERRORLEVEL%==6 goto blockdelete
 if %ERRORLEVEL%==7 goto lastblock
+if %ERRORLEVEL%==8 goto custom
 :w
 if %y%==%maxy% goto screen
 set/a y=%y%+1
@@ -287,4 +289,11 @@ if %blockcount% equ 0 goto restartscreen
 set/a blockcount=%blockcount%-1
 set bx%blockcount%= 
 set by%blockcount%= 
+goto restartscreen
+:custom
+cls
+set/p chr=Custom character must be 1 space, like @_
+set/p block=Custom block must be 1 space, like #_
+echo Press start to apply changes
+pause>nul
 goto restartscreen
