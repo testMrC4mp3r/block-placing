@@ -1,0 +1,3 @@
+12/12/2018
+Custom character and block can be buggy depending on the character
+------------------------------------------------------------------
