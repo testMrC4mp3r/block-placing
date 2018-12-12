@@ -2,3 +2,6 @@
 Added a option in controls to delete the last block placed
 Commented game.bat a little bit more
 ----------------------------------------------------------
+12/12/2018
+"Optimized" the commands for :lastblock, unnecesary variable %blockdelete%, it operates directly with %blockcount%
+------------------------------------------------------------------------------------------------------------------
