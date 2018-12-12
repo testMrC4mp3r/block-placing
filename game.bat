@@ -182,12 +182,13 @@ echo  -----------
 echo Facing=%facing%
 echo You've placed %blockcount% blocks!
 echo Controls
-echo -----------------------
+echo --------------------------
 echo Move with the wasd keys
 echo Place blocks with b
 echo delete ALL blocks with g
 echo delete last block with h
-echo --------------------
+echo Custom chr and block with p
+echo ---------------------------
 echo Maximum of 26 block
 choice /c wasdbghp /n /t 9999 /d w
 if %ERRORLEVEL%==1 goto w
